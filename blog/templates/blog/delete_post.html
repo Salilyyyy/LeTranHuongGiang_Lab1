@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Xóa bài viết</title>
+</head>
+<body>
+    <h1>Xóa bài viết: {{ post.title }}</h1>
+    <p>Bạn có chắc chắn muốn xóa bài viết này không?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Xóa</button>
+    </form>
+    <a href="{% url 'post_list' %}">Quay lại danh sách bài viết</a>
+</body>
+</html>
